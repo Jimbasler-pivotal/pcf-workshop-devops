@@ -1,13 +1,15 @@
-= DevOps on Cloud Foundry Platform
+= Cloud Foundry DevOps Workshop
 
 == Goals
 
-To deploy and configure a microservice and UI, leverage the platform for monitoring & management of the microservice, and do a blue green deployment with zero downtime.
+. Deploy and configure a microservice and UI
+. Leverage the platform for monitoring & management of the microservice
+. Perform a blue/green deployment with zero downtime
 
 == Prerequisites
 
 . Java SDK 1.7+
-. Git from link:https://mac.github.com/[github.com]
+. Git from link:https://github.com/[github.com]
 . Cloud Foundry CLI from link:https://github.com/cloudfoundry/cli/releases[`CF CLI Releases`]
 . Curl from link:http://curl.haxx.se/[curl]
 . Pivotal Web Services Account. +
@@ -18,8 +20,8 @@ Create a free trial account here link:http://run.pivotal.io/[`Pivotal Web Servic
 
 == Pre-work
 
-. Fork and Clone link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/[`PCF Workspace for DevOps`]
-. Review the link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/tree/master[ `cities`] application.
+. Download project workspace ZIP file OR fork and clone link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/[`PCF Workspace for DevOps`]
+. Review the link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/tree/master[ `cities`] application
 
 == Steps
 In this workshop we are going to follow these steps to deploy apps on Cloud foundry and manage the lifecycle of the application.
