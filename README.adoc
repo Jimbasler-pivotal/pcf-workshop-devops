@@ -2,42 +2,35 @@
 
 == Goals
 
+. Push your first application to Cloud Foundry
 . Deploy and configure a microservice and UI
 . Leverage the platform for monitoring & management of the microservice
 . Perform a blue/green deployment with zero downtime
 
 == Prerequisites
 
-. Java SDK 1.7+
-. Git from link:https://github.com/[github.com]
-. Cloud Foundry CLI from link:https://github.com/cloudfoundry/cli/releases[`CF CLI Releases`]
-. Curl from link:http://curl.haxx.se/[curl]
-. Pivotal Web Services Account. +
+. Java Software Development Kit (SDK) 1.7+
+. Pivotal Web Services (PWS) Account. +
 Create a free trial account here link:http://run.pivotal.io/[`Pivotal Web Services`]
-. Optional: Install link:http://www.mysql.com/products/workbench/[MySQL Workbench] or other MySQL tool
-. Optional: Install link:https://golang.org/doc/install[Go Programming Language ]
-. Familiarity with link:http://www.spring.io[Spring IO]
+. Cloud Foundry Command Line Interface (CLI) downloaded from Tools in the App Manager web UI in Pivotal Web Services
+. Optional (or you can simply download the ZIP file): Git from link:https://github.com/[github.com]
+. Optional: Download and install link:http://www.mysql.com/products/workbench/[MySQL Workbench] or other MySQL tool
+. Optional: Download and install link:https://golang.org/doc/install[Go Programming Language ]
+. Optional (or you can use a browser like Chrome to see REST responses): Download and install Curl from link:http://curl.haxx.se/[curl]
+. Basic familiarity with link:http://www.spring.io[Spring IO]
 
 == Pre-work
-<<<<<<< HEAD
-. FE has given a PCF deep dive to the workshop attendees link:https://drive.google.com/a/pivotal.io/file/d/0B_s5GpI2bqC9NjNDLUdUOFJKSjQ[Technical Deep Dive on Cloud Foundry]
-. Fork and Clone link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/[`PCF Workspace for DevOps`]
-. Review the link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/tree/master[ `cities`] application.
-=======
-
+. Attend a Cloud Foundry Deep Dive session provided by Pivotal
 . Download project workspace ZIP file OR fork and clone link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/[`PCF Workspace for DevOps`]
 . Review the link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/tree/master[ `cities`] application
->>>>>>> ea81ed21889c9cfec9728c648e80f64247a8f4ac
 
 == Steps
 In this workshop we are going to follow these steps to deploy apps on Cloud foundry and manage the lifecycle of the application.
 
 image:./images/devops-cf.png[DevOps on CF]
 
-
 [NOTE]
-The instructions in this document are for Mac/Linux based CLI/Shell. If you are using Windows, you can use link:http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html#windows[Windows CLI]
-or a Virtual Box / Vagrant with a link:./vagrant.adoc[Linux VM].
+The instructions in this document are for Mac/Linux based CLI/Shell. If you are using Windows, it may be simpler to follow along using a Virtual Box / Vagrant image, see link:./vagrant.adoc[Linux VM] for more information.
 
 === Building apps
 To build the app go to the workspace folder
@@ -52,7 +45,7 @@ cd pcf-workspace-devops/cities
 
 == PART 1: Introduction to CF, Push an App.
 
-=== Login to the Cloud Platform
+=== Login to Cloud Foundry using the CLI
 
 Use `cf help` and/or `cf <command> --help` for details on each of the commands below.
 
