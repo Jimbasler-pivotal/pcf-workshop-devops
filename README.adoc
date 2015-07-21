@@ -13,7 +13,6 @@
 . Pivotal Web Services (PWS) Account. +
 Create a free trial account here link:http://run.pivotal.io/[`Pivotal Web Services`]
 . Cloud Foundry Command Line Interface (CLI) downloaded from Tools in the App Manager web UI in Pivotal Web Services
-. Gradle build automation downloaded from link:https://gradle.org/gradle-download/[Gradle.org]
 . Optional (or you can simply download the ZIP file): Git from link:https://github.com/[github.com]
 . Optional: Download and install link:http://www.mysql.com/products/workbench/[MySQL Workbench] or other MySQL tool
 . Optional: Download and install link:https://golang.org/doc/install[Go Programming Language ]
