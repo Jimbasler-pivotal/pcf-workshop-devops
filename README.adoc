@@ -30,7 +30,7 @@ In this workshop we are going to follow these steps to deploy apps on Cloud foun
 image:./images/devops-cf.png[DevOps on CF]
 
 [NOTE]
-The instructions in this document are for Mac/Linux based CLI/Shell. If you are using Windows, it may be simpler to follow along using a Virtual Box / Vagrant image, see link:./vagrant.adoc[Linux VM] for more information.
+The instructions in this document are for Mac/Linux based CLI/Shell.  If you are using Windows, it may be simpler to follow along using a Virtual Box / Vagrant image, see link:./vagrant.adoc[Linux VM] for more information.
 
 === Building apps
 To build the app go to the workspace folder
