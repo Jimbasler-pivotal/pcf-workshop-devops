@@ -574,7 +574,7 @@ cf delete-route cfapps.io -n <first-initial><last-initial>-cities-ui
 === Push Version 2 and Delete the Old Route using the script
 We are going to deploy the next version of the `cities-ui` app. The deployment typically is automated using a CD pipeline built with Jenkins, FlexDeploy or other CD automation tool, but in this workshop we will walk through a simple version number change in the deployment manifest.
 
-. Edit the `manifest.blue-green` with the following variables
+. Edit the `manifest.yml` with the following variables
 [source,bash]
 ---
  VERSION: CITIES_APP_1_0
@@ -591,11 +591,11 @@ export CF_ORG=               //CF_ORG is the name of the Organization within Piv
 export CF_SPACE=             //CF_SPACE is the name of the Space within the above Organization where you want your application deployed.
 export CF_APP=<first-initial><last-initial>-cities-ui
 export CF_JAR=build/libs/cities-ui.jar
-export CF_MANIFEST=manifest.blue-green
+export CF_MANIFEST=manifest.yml
 export BUILD_NUMBER=1001
 ---
 +
-Note: Be sure to change the CF_APP name to match your application and add the BUILD_NUMBER to the env file. Add the Version number in the manifest.blue-green
+Note: Be sure to change the CF_APP name to match your application and add the BUILD_NUMBER to the env file. Add the Version number in the manifest.yml
 +
 . First deploy the blue v1 of the app.
 +
@@ -605,7 +605,7 @@ Note: Be sure to change the CF_APP name to match your application and add the BU
 $cf push "$CF_APP-$BUILD_NUMBER" -n "$CF_APP-$BUILD_NUMBER" -d $CF_APPS_DOMAIN -p $CF_JAR -f $CF_MANIFEST
 ----
 
-. Next, increment the BUILD_NUMBER in the env file and source it. Change the VERSION number in the manifest.blue-green
+. Next, increment the BUILD_NUMBER in the env file and source it. Change the VERSION number in the manifest.yml
 +
 [source,bash]
 ----
@@ -639,7 +639,7 @@ $cf delete-route $CF_APPS_DOMAIN -n "$DEPLOYED_VERSION" -f
 ----
 
 . Alternatively, use the bash script `blue-green.sh` in the cities-ui directory, deploy the green v2 and delete the blue v1 of the app. +
-If you are using the script make sure you increment the BUILD_NUMBER in the env file and change the VERSION number in the manifest.blue-green.
+If you are using the script make sure you increment the BUILD_NUMBER in the env file and change the VERSION number in the manifest.yml.
 
 +
 
@@ -737,7 +737,7 @@ $ cf install-plugin $GOPATH/bin/autopilot
 $ cd cities-services
 // Increment the Build
 $ cf zero-downtime-push cities-services \
-    -f manifest.blue-green \
+    -f manifest.yml \
     -p build/libs//cities-service-0.0.1-SNAPSHOT.jar
 
 ----
