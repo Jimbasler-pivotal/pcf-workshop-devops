@@ -9,7 +9,7 @@
 
 == Prerequisites
 
-. Java Software Development Kit (SDK) 1.7+
+. Java Software Development Kit (SDK) 1.8+
 . Pivotal Web Services (PWS) Account. +
 Create a free trial account here link:http://run.pivotal.io/[`Pivotal Web Services`]
 . Cloud Foundry Command Line Interface (CLI) downloaded from Tools in the App Manager web UI in Pivotal Web Services
@@ -17,11 +17,11 @@ Create a free trial account here link:http://run.pivotal.io/[`Pivotal Web Servic
 . Optional: Download and install link:http://www.mysql.com/products/workbench/[MySQL Workbench] or other MySQL tool
 . Optional: Download and install link:https://golang.org/doc/install[Go Programming Language ]
 . Optional (or you can use a browser like Chrome to see REST responses): Download and install Curl from link:http://curl.haxx.se/[curl]
-. Basic familiarity with link:http://www.spring.io[Spring IO]
+. Basic familiarity with link:http://www.spring.io[Spring]
 
 == Pre-work
 . Attend a Cloud Foundry Deep Dive session provided by Pivotal
-. Download project workspace ZIP file OR fork and clone link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/[`PCF Workspace for DevOps`]
+. Download project workspace ZIP file OR fork and clone link:https://github.com/jimbasler-pivotal/pcf-workspace-devops/[`PCF Workspace for DevOps`]
 . Review the link:https://github.com/Pivotal-Field-Engineering/pcf-workspace-devops/tree/master[ `cities`] application
 
 == Steps
@@ -33,7 +33,7 @@ image:./images/devops-cf.png[DevOps on CF]
 The instructions in this document are for Mac/Linux based CLI/Shell.  If you are using Windows, it may be simpler to follow along using a Virtual Box / Vagrant image.
 
 === Building apps
-To build the app go to the workspace folder
+To build the app go to the workspace folder and use gradlew for your platform.
 
 [source,bash]
 ----
