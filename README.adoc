@@ -212,11 +212,11 @@ For more information refer to link:Spring-Cloud.adoc[this document] on Spring Cl
 Next, let's push the cities-service app with a manifest to help automate deployment.
 
 . Review the documentation: http://docs.pivotal.io/pivotalcf/devguide/deploy-apps/manifest.html
-. Edit the application manifest  `manifest.service` in your `cities-service`
+. Edit the application manifest  `manifest.yml` in your `cities-service`
 +
 [source,bash]
 ----
-$ nano manifest.service
+$ nano manifest.yml
 ----
 +
 . Set the name of the app, the amount of memory, the number of instances, and the path to the .jar file.
@@ -233,7 +233,7 @@ $ cf unbind-service <first-initial><last-initial>-cities-service <first-initial>
 +
 [source,bash]
 ----
-$ cf push -f manifest.service
+$ cf push
 ----
 Notice that using a manifest, you have moved the command line parameters (number of instances, memory, etc) into the manifest.
 . Verify you can access your application via a curl or browser request:
