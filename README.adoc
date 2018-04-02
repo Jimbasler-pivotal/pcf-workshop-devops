@@ -96,7 +96,7 @@ $ cf target
 [source,bash]
 ----
 $ cd cities-hello
-$ cf push <first-initial><last-initial>-cities-hello
+$ cf push
 
 // This will give an output which is similar to this
 
