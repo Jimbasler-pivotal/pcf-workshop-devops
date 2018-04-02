@@ -37,7 +37,7 @@ To build the app go to the workspace folder and use gradlew for your platform.
 
 [source,bash]
 ----
-cd pcf-workspace-devops/cities
+cd pcf-workspace-devops
 ./gradlew clean
 ./gradlew build
 ----
